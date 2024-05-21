@@ -1,6 +1,7 @@
 package com.shadowking21.tc_integraton;
 
 import com.shadowking21.tc_integraton.OreDicts.OreDicts;
+import com.shadowking21.tc_integraton.MekanismCompat;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.fml.common.Mod;
@@ -27,6 +28,7 @@ public class thaumcraft_integration
     @EventHandler
     public void init(FMLInitializationEvent event)
     {
-        if (Loader.isModLoaded("thaumcraft")) MinecraftForge.EVENT_BUS.register(new OreDicts());
+        MinecraftForge.EVENT_BUS.register(new OreDicts());
+        if (Loader.isModLoaded("mekanism")) MinecraftForge.EVENT_BUS.register(new MekanismCompat());
     }
 }

@@ -21,6 +21,7 @@ public class OreDicts {
         register.registerObjectTag("dustHOPGraphite", (new AspectList()).add(Aspect.FIRE, 30).add(Aspect.ENERGY, 30).add(Aspect.ENTROPY, 1));
         register.registerObjectTag("ingotAluminum", (new AspectList()).add(Aspect.METAL, 10).add(Aspect.AIR, 5));
         register.registerObjectTag("dustAluminum", (new AspectList()).add(Aspect.METAL, 10).add(Aspect.AIR, 5).add(Aspect.ENTROPY, 1));
+        register.registerObjectTag("nuggetAluminum", (new AspectList()).add(Aspect.METAL, 1));
         register.registerObjectTag("ingotMithril", (new AspectList()).add(Aspect.METAL, 10).add(Aspect.MAGIC, 5));
         register.registerObjectTag("dustMithril", (new AspectList()).add(Aspect.METAL, 10).add(Aspect.MAGIC, 5).add(Aspect.ENTROPY, 1));
         register.registerObjectTag("nuggetMithril", (new AspectList()).add(Aspect.METAL, 1));
@@ -111,5 +112,43 @@ public class OreDicts {
         register.registerObjectTag("blockEnchantedGravitite", (new AspectList()).add(Aspect.CRYSTAL, 10).add(Aspect.FLIGHT, 10).add(Aspect.AIR, 10).add(Aspect.MOTION, 10));
         register.registerObjectTag("oreZanite", (new AspectList()).add(Aspect.EARTH, 10).add(Aspect.CRYSTAL, 5).add(Aspect.AIR, 5));
         register.registerObjectTag("oreGravitite", (new AspectList()).add(Aspect.EARTH, 15).add(Aspect.CRYSTAL, 10).add(Aspect.FLIGHT, 10).add(Aspect.AIR, 10).add(Aspect.MOTION, 10));
+        register.registerObjectTag("stoneMarble", (new AspectList()).add(Aspect.EARTH, 5).add(Aspect.ORDER, 1));
+        register.registerObjectTag("blockMarble", (new AspectList()).add(Aspect.EARTH, 5).add(Aspect.ORDER, 1));
+        register.registerObjectTag("ingotIronCompressed", (new AspectList()).add(Aspect.METAL, 10).add(Aspect.VOID, 5));
+        register.registerObjectTag("cast", (new AspectList()).add(Aspect.TOOL, 5).add(Aspect.VOID, 5).add(Aspect.METAL, 5));
+        register.registerObjectTag("oreCertusQuartz", (new AspectList()).add(Aspect.CRYSTAL, 5).add(Aspect.SENSES, 5).add(Aspect.EARTH, 5));
+        register.registerObjectTag("oreCertusChargedQuartz", (new AspectList()).add(Aspect.CRYSTAL, 5).add(Aspect.SENSES, 5).add(Aspect.ENERGY, 5).add(Aspect.EARTH, 5));
+        register.registerObjectTag("oreAstralStarmetal", (new AspectList()).add(Aspect.METAL, 10).add(Aspect.LIGHT, 10).add(Aspect.DARKNESS, 10).add(Aspect.EARTH, 5));
+        register.registerObjectTag("gemApatite", (new AspectList()).add(Aspect.CRYSTAL, 2).add(Aspect.LIFE, 2));
+        register.registerObjectTag("oreApatite", (new AspectList()).add(Aspect.EARTH, 5).add(Aspect.CRYSTAL, 2).add(Aspect.LIFE, 2));
+        register.registerObjectTag("oreAluminum", (new AspectList()).add(Aspect.METAL, 10).add(Aspect.AIR, 5).add(Aspect.EARTH, 5));
+        register.registerObjectTag("oreNickel", (new AspectList()).add(Aspect.METAL, 10).add(Aspect.MECHANISM, 5).add(Aspect.EARTH, 5));
+        register.registerObjectTag("oreOsmium", (new AspectList()).add(Aspect.METAL, 10).add(Aspect.ALCHEMY, 5).add(Aspect.EARTH, 5));
+        register.registerObjectTag("oreDraconium", (new AspectList()).add(Aspect.METAL, 10).add(Aspect.FIRE, 5).add(Aspect.DARKNESS, 5).add(Aspect.EARTH, 5));
+        register.registerObjectTag("oreAmbrosium", (new AspectList()).add(Aspect.LIGHT, 5).add(Aspect.LIFE, 5));
+        register.registerObjectTag("oreClathrateRedstone", (new AspectList()).add(Aspect.ENERGY, 5).add(Aspect.WATER, 5).add(Aspect.CRYSTAL, 5).add(Aspect.EARTH, 5));
+        register.registerObjectTag("crystalRedstone", (new AspectList()).add(Aspect.ENERGY, 5).add(Aspect.CRYSTAL, 5));
+        register.registerObjectTag("clathrateRedstone", (new AspectList()).add(Aspect.ENERGY, 5).add(Aspect.CRYSTAL, 5));
+        register.registerObjectTag("itemCinnabar", (new AspectList()).add(Aspect.METAL, 5).add(Aspect.DEATH, 5));
+        register.registerObjectTag("crystalCinnabar", (new AspectList()).add(Aspect.METAL, 5).add(Aspect.DEATH, 5));
+        register.registerObjectTag("dustWood", (new AspectList()).add(Aspect.PLANT, 5).add(Aspect.ENTROPY, 1));
+        register.registerObjectTag("pulpWood", (new AspectList()).add(Aspect.PLANT, 5).add(Aspect.ENTROPY, 1));
+        register.registerObjectTag("crystalSlag", (new AspectList()).add(Aspect.ENTROPY, 5).add(Aspect.EARTH, 5));
+        register.registerObjectTag("itemSlag", (new AspectList()).add(Aspect.ENTROPY, 5).add(Aspect.EARTH, 5));
+        register.registerObjectTag("crystalSlagRich", (new AspectList()).add(Aspect.ENTROPY, 5).add(Aspect.METAL, 5));
+        register.registerObjectTag("itemSlagRich", (new AspectList()).add(Aspect.ENTROPY, 5).add(Aspect.METAL, 5));
+        register.registerObjectTag("itemBiomass", (new AspectList()).add(Aspect.PLANT, 5).add(Aspect.ENTROPY, 5));
+        register.registerObjectTag("itemBiomassRich", (new AspectList()).add(Aspect.PLANT, 5).add(Aspect.LIFE, 5).add(Aspect.ENTROPY, 5));
+        register.registerObjectTag("dustCharcoal", (new AspectList()).add(Aspect.FIRE, 10).add(Aspect.ENERGY, 10));
+        register.registerObjectTag("orePlatinum", (new AspectList()).add(Aspect.METAL, 5).add(Aspect.CRYSTAL, 5).add(Aspect.DESIRE, 5).add(Aspect.EARTH, 5));
+        register.registerObjectTag("oreIridium", (new AspectList()).add(Aspect.METAL, 10).add(Aspect.CRYSTAL, 10).add(Aspect.EARTH, 5));
+        register.registerObjectTag("oreMithril", (new AspectList()).add(Aspect.METAL, 10).add(Aspect.MAGIC, 5).add(Aspect.EARTH, 5));
+        register.registerObjectTag("oreArdite", (new AspectList()).add(Aspect.EARTH, 15).add(Aspect.METAL, 10).add(Aspect.FIRE, 10));
+        register.registerObjectTag("oreCobalt", (new AspectList()).add(Aspect.METAL, 10).add(Aspect.TOOL, 10).add(Aspect.EXCHANGE, 5).add(Aspect.EARTH, 5));
+        register.registerObjectTag("dustDiamond", (new AspectList()).add(Aspect.CRYSTAL, 15).add(Aspect.DESIRE, 15).add(Aspect.ENTROPY, 5));
+        register.registerObjectTag("dustSteel", (new AspectList()).add(Aspect.METAL, 15).add(Aspect.ORDER, 5).add(Aspect.ENTROPY, 1));
+        register.registerObjectTag("dustLithium", (new AspectList()).add(Aspect.METAL, 10).add(Aspect.ENERGY, 10).add(Aspect.ENTROPY, 1));
+        register.registerObjectTag("itemBioFuel", (new AspectList()).add(Aspect.PLANT, 5).add(Aspect.ENTROPY, 5));
     }
+
 }

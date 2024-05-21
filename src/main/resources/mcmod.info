@@ -5,7 +5,7 @@
   "description": "This mod adds aspect integration between Thaumcraft and other mods. End",
   "version": "${version}",
   "mcversion": "${mcversion}",
-  "url": "",
+  "url": "https://www.curseforge.com/minecraft/mc-mods/thaumcraft-integration",
   "updateUrl": "",
   "authorList": ["ShadowKing21"],
   "credits": "Thanks Azanor for developing Thaumcraft mod",

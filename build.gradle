@@ -11,7 +11,7 @@ apply plugin: 'net.minecraftforge.gradle.forge'
 //Only edit below this line, the above code adds and enables the necessary things for Forge to be setup.
 
 
-version = "0.1"
+version = "0.2"
 group = "com.shadowking21.tc_integration" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "tc_integration"
 
@@ -44,6 +44,7 @@ dependencies {
     //compile "some.group:artifact:version"
     compile('curse.maven:thaumcraft-223628:2629023')
     compile('curse.maven:baubles-227083:2518667')
+    provided "curse.maven:mekanism-268560:2835175"
     //deobfProvided "thaumcraft:Thaumcraft:1.12.2:6.1.BETA26"
     // real examples
     //compile 'com.mod-buildcraft:buildcraft:6.0.8:dev'  // adds buildcraft to the dev env
