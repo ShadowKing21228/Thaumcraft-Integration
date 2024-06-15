@@ -11,6 +11,7 @@ public class OreDicts {
     {
         AspectEventProxy register = event.register;
         //register.registerObjectTag(new ItemStack(ItemUtils.getRegisteredItem("minecraft", "gold_ingot")), new AspectList().add(Aspect.METAL, 100));
+        System.out.println("[Thaumcraft Integration] Add a Aspects for OreDictionaries!");
         register.registerObjectTag("dustSulfur", (new AspectList()).add(Aspect.FIRE, 5).add(Aspect.ENERGY, 5));
         register.registerObjectTag("dustElectrum", (new AspectList()).add(Aspect.METAL, 10).add(Aspect.ENERGY, 5).add(Aspect.DESIRE, 5).add(Aspect.ENTROPY, 1));
         register.registerObjectTag("ingotElectrum", (new AspectList()).add(Aspect.METAL, 10).add(Aspect.ENERGY, 5).add(Aspect.DESIRE, 5));
@@ -125,7 +126,7 @@ public class OreDicts {
         register.registerObjectTag("oreNickel", (new AspectList()).add(Aspect.METAL, 10).add(Aspect.MECHANISM, 5).add(Aspect.EARTH, 5));
         register.registerObjectTag("oreOsmium", (new AspectList()).add(Aspect.METAL, 10).add(Aspect.ALCHEMY, 5).add(Aspect.EARTH, 5));
         register.registerObjectTag("oreDraconium", (new AspectList()).add(Aspect.METAL, 10).add(Aspect.FIRE, 5).add(Aspect.DARKNESS, 5).add(Aspect.EARTH, 5));
-        register.registerObjectTag("oreAmbrosium", (new AspectList()).add(Aspect.LIGHT, 5).add(Aspect.LIFE, 5));
+        register.registerObjectTag("oreAmbrosium", (new AspectList()).add(Aspect.LIGHT, 5).add(Aspect.LIFE, 5).add(Aspect.EARTH, 5));
         register.registerObjectTag("oreClathrateRedstone", (new AspectList()).add(Aspect.ENERGY, 5).add(Aspect.WATER, 5).add(Aspect.CRYSTAL, 5).add(Aspect.EARTH, 5));
         register.registerObjectTag("crystalRedstone", (new AspectList()).add(Aspect.ENERGY, 5).add(Aspect.CRYSTAL, 5));
         register.registerObjectTag("clathrateRedstone", (new AspectList()).add(Aspect.ENERGY, 5).add(Aspect.CRYSTAL, 5));
@@ -149,6 +150,59 @@ public class OreDicts {
         register.registerObjectTag("dustSteel", (new AspectList()).add(Aspect.METAL, 15).add(Aspect.ORDER, 5).add(Aspect.ENTROPY, 1));
         register.registerObjectTag("dustLithium", (new AspectList()).add(Aspect.METAL, 10).add(Aspect.ENERGY, 10).add(Aspect.ENTROPY, 1));
         register.registerObjectTag("itemBioFuel", (new AspectList()).add(Aspect.PLANT, 5).add(Aspect.ENTROPY, 5));
+        register.registerObjectTag("woodRubber", (new AspectList()).add(Aspect.PLANT, 20).add(Aspect.TOOL, 5));
+        register.registerObjectTag("itemRawRubber", (new AspectList()).add(Aspect.PLANT, 5).add(Aspect.TOOL, 3).add(Aspect.MOTION, 3));
+        register.registerObjectTag("foodFlour", (new AspectList()).add(Aspect.CRAFT, 5).add(Aspect.PLANT, 3).add(Aspect.LIFE, 3));
+        register.registerObjectTag("listAllfruit", (new AspectList()).add(Aspect.PLANT, 5).add(Aspect.LIFE, 5));
+        register.registerObjectTag("teethBuffalo", (new AspectList()).add(Aspect.BEAST, 10).add(Aspect.AVERSION, 5));
+        register.registerObjectTag("hideBuffalo", (new AspectList()).add(Aspect.BEAST, 10).add(Aspect.PROTECT, 10));
+        register.registerObjectTag("listAllnut", (new AspectList()).add(Aspect.PLANT, 5).add(Aspect.LIFE, 5).add(Aspect.PROTECT, 3));
+        register.registerObjectTag("fruitForestry", (new AspectList()).add(Aspect.PLANT, 5).add(Aspect.LIFE, 5));
+        register.registerObjectTag("ingotBrickNetherGlazed", (new AspectList()).add(Aspect.EARTH, 10).add(Aspect.WATER, 5).add(Aspect.FIRE, 3).add(Aspect.ALCHEMY, 3));
+        register.registerObjectTag("nuggetEmerald", (new AspectList()).add(Aspect.CRYSTAL, 1).add(Aspect.DESIRE, 1));
+        register.registerObjectTag("gemAquamarine", (new AspectList()).add(Aspect.CRYSTAL, 3).add(Aspect.SENSES, 3).add(Aspect.WATER, 3));
+        register.registerObjectTag("oreAquamarine", (new AspectList()).add(Aspect.EARTH, 5).add(Aspect.ENTROPY, 3).add(Aspect.CRYSTAL, 3).add(Aspect.SENSES, 3).add(Aspect.WATER, 3));
+        register.registerObjectTag("gemPeridot", (new AspectList()).add(Aspect.CRYSTAL, 10).add(Aspect.DESIRE, 10));
+        register.registerObjectTag("orePeridot", (new AspectList()).add(Aspect.CRYSTAL, 10).add(Aspect.DESIRE, 10).add(Aspect.EARTH, 5));
+        register.registerObjectTag("oreTopaz", (new AspectList()).add(Aspect.CRYSTAL, 10).add(Aspect.DESIRE, 10).add(Aspect.EARTH, 5));
+        register.registerObjectTag("gemTopaz", (new AspectList()).add(Aspect.CRYSTAL, 10).add(Aspect.DESIRE, 10));
+        register.registerObjectTag("oreTanzanite", (new AspectList()).add(Aspect.CRYSTAL, 10).add(Aspect.DESIRE, 10).add(Aspect.EARTH, 5));
+        register.registerObjectTag("gemTanzanite", (new AspectList()).add(Aspect.CRYSTAL, 10).add(Aspect.DESIRE, 10));
+        register.registerObjectTag("oreMalachite", (new AspectList()).add(Aspect.CRYSTAL, 10).add(Aspect.DESIRE, 10).add(Aspect.EARTH, 5));
+        register.registerObjectTag("gemMalachite", (new AspectList()).add(Aspect.CRYSTAL, 10).add(Aspect.DESIRE, 10));
+        register.registerObjectTag("oreSapphire", (new AspectList()).add(Aspect.CRYSTAL, 10).add(Aspect.DESIRE, 10).add(Aspect.EARTH, 5));
+        register.registerObjectTag("oreRuby", (new AspectList()).add(Aspect.CRYSTAL, 10).add(Aspect.DESIRE, 10).add(Aspect.EARTH, 5));
+        register.registerObjectTag("oreArlemite", (new AspectList()).add(Aspect.METAL, 10).add(Aspect.EARTH, 10));
+        register.registerObjectTag("ingotArlemite", (new AspectList()).add(Aspect.METAL, 10).add(Aspect.EARTH, 5));
+        register.registerObjectTag("nuggetArlemite", (new AspectList()).add(Aspect.METAL, 1));
+        register.registerObjectTag("oreRealmite", (new AspectList()).add(Aspect.METAL, 10).add(Aspect.FIRE, 5).add(Aspect.EARTH, 5));
+        register.registerObjectTag("ingotRealmite", (new AspectList()).add(Aspect.METAL, 10).add(Aspect.FIRE, 5));
+        register.registerObjectTag("nuggetRealmite", (new AspectList()).add(Aspect.METAL, 1));
+        register.registerObjectTag("oreRupee", (new AspectList()).add(Aspect.METAL, 10).add(Aspect.WATER, 5).add(Aspect.EARTH, 5));
+        register.registerObjectTag("ingotRupee", (new AspectList()).add(Aspect.METAL, 10).add(Aspect.WATER, 5));
+        register.registerObjectTag("nuggetRupee", (new AspectList()).add(Aspect.METAL, 1));
+        register.registerObjectTag("oreProsperity", (new AspectList()).add(Aspect.CRYSTAL, 5).add(Aspect.EARTH, 5).add(Aspect.ORDER, 1).add(Aspect.SENSES, 1));
+        register.registerObjectTag("oreInferium", (new AspectList()).add(Aspect.EARTH, 5).add(Aspect.BEAST, 3).add(Aspect.PLANT, 3).add(Aspect.ENERGY, 3));
+        register.registerObjectTag("oreAmethyst", (new AspectList()).add(Aspect.CRYSTAL, 10).add(Aspect.DESIRE, 10).add(Aspect.EARTH, 5));
+        register.registerObjectTag("gemAmethyst", (new AspectList()).add(Aspect.CRYSTAL, 10).add(Aspect.DESIRE, 10));
+        register.registerObjectTag("oreAquamarine", (new AspectList()).add(Aspect.EARTH, 5).add(Aspect.CRYSTAL, 3).add(Aspect.SENSES, 3).add(Aspect.WATER, 3));
+        register.registerObjectTag("oreBloodgem", (new AspectList()).add(Aspect.CRYSTAL, 10).add(Aspect.LIFE, 5).add(Aspect.EARTH, 5));
+        register.registerObjectTag("gemBlood", (new AspectList()).add(Aspect.CRYSTAL, 10).add(Aspect.LIFE, 5));
+        register.registerObjectTag("oreNetherite", (new AspectList()).add(Aspect.METAL, 10).add(Aspect.EARTH, 10).add(Aspect.FIRE, 5));
+        register.registerObjectTag("ingotNetherite", (new AspectList()).add(Aspect.METAL, 10).add(Aspect.EARTH, 5).add(Aspect.FIRE, 5));
+        register.registerObjectTag("oreEden", (new AspectList()).add(Aspect.EARTH, 5).add(Aspect.CRYSTAL, 3).add(Aspect.ENTROPY, 3));
+        register.registerObjectTag("fragmentsEden", (new AspectList()).add(Aspect.CRYSTAL, 3).add(Aspect.ENTROPY, 3));
+        register.registerObjectTag("oreWildwood", (new AspectList()).add(Aspect.EARTH, 5).add(Aspect.CRYSTAL, 3).add(Aspect.ENTROPY, 3).add(Aspect.COLD, 3));
+        register.registerObjectTag("fragmentsWildwood", (new AspectList()).add(Aspect.CRYSTAL, 3).add(Aspect.ENTROPY, 3).add(Aspect.COLD, 3));
+        register.registerObjectTag("oreApalachia", (new AspectList()).add(Aspect.EARTH, 5).add(Aspect.CRYSTAL, 3).add(Aspect.ENTROPY, 3).add(Aspect.ELDRITCH, 3));
+        register.registerObjectTag("fragmentsApalachia", (new AspectList()).add(Aspect.CRYSTAL, 3).add(Aspect.ENTROPY, 3).add(Aspect.ELDRITCH, 3));
+        register.registerObjectTag("oreSkythern", (new AspectList()).add(Aspect.EARTH, 5).add(Aspect.CRYSTAL, 3).add(Aspect.ENTROPY, 3).add(Aspect.VOID, 3));
+        register.registerObjectTag("fragmentsSkythern", (new AspectList()).add(Aspect.CRYSTAL, 3).add(Aspect.ENTROPY, 3).add(Aspect.VOID, 3));
+        register.registerObjectTag("oreMortum", (new AspectList()).add(Aspect.EARTH, 5).add(Aspect.CRYSTAL, 3).add(Aspect.ENTROPY, 3).add(Aspect.SOUL, 3));
+        register.registerObjectTag("fragmentsMortum", (new AspectList()).add(Aspect.CRYSTAL, 3).add(Aspect.ENTROPY, 3).add(Aspect.SOUL, 3));
+        register.registerObjectTag("itemSilicon", (new AspectList()).add(Aspect.CRAFT, 5).add(Aspect.EXCHANGE, 5));
+        register.registerObjectTag("dustEnder", (new AspectList()).add(Aspect.MOTION, 15).add(Aspect.ELDRITCH, 10).add(Aspect.ENTROPY, 1));
+        register.registerObjectTag("dustEnderPearl", (new AspectList()).add(Aspect.MOTION, 15).add(Aspect.ELDRITCH, 10).add(Aspect.ENTROPY, 1));
+        register.registerObjectTag("nuggetEnderpearl", (new AspectList()).add(Aspect.MOTION, 1).add(Aspect.ELDRITCH, 1));
     }
-
 }

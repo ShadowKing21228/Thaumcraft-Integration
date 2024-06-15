@@ -87,6 +87,15 @@ public class ItemUtils {
         }
         return item;
     }
+    public static ItemStack getRegisteredItemStack(String name, String path, int meta)
+    {
+        Item item = Item.REGISTRY.getObject(new ResourceLocation(name, path));
+        if(item == null) {
+            return null;
+        }
+        ItemStack itemstack = new ItemStack(item, 1, meta);
+        return itemstack;
+    }
     public static String[] splitObjectName(String toSplit, String MODID)
     {
         String[] astring = new String[] {MODID, toSplit};
