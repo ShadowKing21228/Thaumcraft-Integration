@@ -134,10 +134,10 @@ public class AspectMetalProcessing {
                 Set<Aspect> AspectMass = oreAspectList.aspects.keySet();
                 List<Aspect> AspectMassFromMap = new ArrayList<>(AspectMass);
 
-                for (int b = 0; AspectMassFromMap.size() > b; b++) {
-                    Aspect oneAspect = AspectMassFromMap.get(b);
+                for (Aspect oneAspect : AspectMassFromMap) {
                     AspectNums.add(Double.valueOf(oreAspectList.aspects.get(oneAspect)));
                 }
+
                 for (int j = 0; j < AspectMassFromMap.size(); j++) {
                     AspectRodNums.add(AspectNums.get(j) * 0.5 * 0.75);
                     AspectNuggetNums.add(AspectNums.get(j) * 0.1);

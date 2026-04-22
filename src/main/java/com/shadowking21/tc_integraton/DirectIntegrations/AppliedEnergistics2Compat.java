@@ -29,9 +29,8 @@ public class AppliedEnergistics2Compat {
         register.registerObjectTag(ItemUtils.getRegisteredItemStack("appliedenergistics2", "material", 22), new AspectList().add(Aspect.CRAFT, 20).add(Aspect.METAL, 5).add(Aspect.DESIRE, 5).add(Aspect.ENERGY, 5));
         register.registerObjectTag(ItemUtils.getRegisteredItemStack("appliedenergistics2", "material", 24), new AspectList().add(Aspect.CRAFT, 20).add(Aspect.CRYSTAL, 10).add(Aspect.DESIRE, 10).add(Aspect.ENERGY, 5));
         int[] pressmass = {13, 14, 15, 19};
-        for (int a = 0; a < pressmass.length; a++)
-        {
-            register.registerObjectTag(ItemUtils.getRegisteredItemStack("appliedenergistics2", "material", pressmass[a]), new AspectList().add(Aspect.METAL, 30).add(Aspect.VOID, 10));
+        for (int i : pressmass) {
+            register.registerObjectTag(ItemUtils.getRegisteredItemStack("appliedenergistics2", "material", i), new AspectList().add(Aspect.METAL, 30).add(Aspect.VOID, 10));
         }
         register.registerObjectTag(ItemUtils.getRegisteredItemStack("appliedenergistics2", "material", 1), new AspectList().add(Aspect.CRYSTAL, 5).add(Aspect.SENSES, 5).add(Aspect.ENERGY, 5));
         register.registerObjectTag(ItemUtils.getRegisteredItemStack("appliedenergistics2", "material", 47), new AspectList().add(Aspect.VOID, 256).add(Aspect.FLUX, 256).add(Aspect.ENTROPY, 256));

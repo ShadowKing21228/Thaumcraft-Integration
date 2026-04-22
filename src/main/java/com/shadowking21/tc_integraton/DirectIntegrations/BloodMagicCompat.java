@@ -134,6 +134,6 @@ public class BloodMagicCompat {
         nbtTag.setString("orb", "bloodmagic:archmage");
         weakorb.setTagCompound(nbtTag);
         register.registerComplexObjectTag(weakorb, new AspectList().add(Aspect.MAGIC, 40).add(Aspect.LIFE, 30).add(Aspect.ORDER, 20).add(Aspect.AURA, 10).add(Aspect.ELDRITCH, 10));
-        AspectRegister.registerFluidAspect("lifeessence", new AspectList().add(Aspect.WATER, 10).add(Aspect.LIFE, 10));
+        AspectRegister.registerFluidAspect(register, "lifeessence", new AspectList().add(Aspect.WATER, 10).add(Aspect.LIFE, 10));
     }
 }

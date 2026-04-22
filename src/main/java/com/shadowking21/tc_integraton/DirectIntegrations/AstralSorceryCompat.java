@@ -95,7 +95,7 @@ public class AstralSorceryCompat {
         register.registerObjectTag(ItemUtils.getRegisteredItemStack(as, "blockgemcrystals", 3), new AspectList().add(Aspect.CRYSTAL, 10).add(Aspect.FIRE, 10).add(Aspect.LIGHT, 5).add(Aspect.EARTH, 5));
         register.registerObjectTag(ItemUtils.getRegisteredItemStack(as, "blockgemcrystals", 4), new AspectList().add(Aspect.CRYSTAL, 10).add(Aspect.MOTION, 10).add(Aspect.FLIGHT, 5).add(Aspect.EARTH, 5));
         register.registerObjectTag(ItemUtils.getRegisteredItemStack(as, "itemcape", 0), new AspectList().add(Aspect.BEAST, 30).add(Aspect.METAL, 30).add(Aspect.PROTECT, 28).add(Aspect.LIGHT, 25).add(Aspect.DARKNESS, 25).add(Aspect.MAGIC, 25));
-        AspectRegister.registerFluidAspect("astralsorcery.liquidstarlight", new AspectList().add(Aspect.WATER, 10).add(Aspect.LIGHT, 10));
+        AspectRegister.registerFluidAspect(register, "astralsorcery.liquidstarlight", new AspectList().add(Aspect.WATER, 10).add(Aspect.LIGHT, 10));
         int b = 3;
         for (int a = 0; a < 5; a++)
         {

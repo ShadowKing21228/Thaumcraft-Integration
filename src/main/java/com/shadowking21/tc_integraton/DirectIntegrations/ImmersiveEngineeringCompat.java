@@ -1,6 +1,5 @@
 package com.shadowking21.tc_integraton.DirectIntegrations;
 
-import com.shadowking21.tc_integraton.Utils.AspectRegister;
 import com.shadowking21.tc_integraton.Utils.ItemUtils;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import thaumcraft.api.aspects.Aspect;

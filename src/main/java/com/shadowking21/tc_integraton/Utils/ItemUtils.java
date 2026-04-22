@@ -56,11 +56,7 @@ public class ItemUtils {
     }
 
     public static Item getRegisteredItem(String name, String path) {
-        Item item = Item.REGISTRY.getObject(new ResourceLocation(name, path));
-        if (item == null) {
-            return null;
-        }
-        return item;
+        return Item.REGISTRY.getObject(new ResourceLocation(name, path));
     }
 
     public static ItemStack getRegisteredItemStack(String name, String path, int meta) {

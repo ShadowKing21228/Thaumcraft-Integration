@@ -1,22 +1,18 @@
 package com.shadowking21.tc_integraton.Utils;
 
 import net.minecraft.init.Items;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fluids.Fluid;
 import net.minecraftforge.fluids.FluidRegistry;
 import net.minecraftforge.fluids.FluidStack;
 import net.minecraftforge.fluids.capability.CapabilityFluidHandler;
 import net.minecraftforge.fluids.capability.IFluidHandlerItem;
-import net.minecraftforge.fml.common.registry.ForgeRegistries;
-import thaumcraft.api.ThaumcraftApi;
 import thaumcraft.api.aspects.AspectEventProxy;
 import thaumcraft.api.aspects.AspectList;
 
 public class AspectRegister {
 
-    public static void registerFluidAspect(String fluidName, AspectList aspects) {
+    public static void registerFluidAspect(AspectEventProxy event, String fluidName, AspectList aspects) {
         Fluid fluid = FluidRegistry.getFluid(fluidName);
         if (fluid != null) {
             ItemStack emptyBucket = new ItemStack(Items.BUCKET);
@@ -26,7 +22,7 @@ public class AspectRegister {
                 fluidHandler.fill(fluidStack, true);
                 ItemStack filledBucket = fluidHandler.getContainer();
 
-                ThaumcraftApi.registerObjectTag(filledBucket, new AspectList(new ItemStack(Items.BUCKET)).add(aspects));
+                event.registerObjectTag(filledBucket, new AspectList(new ItemStack(Items.BUCKET)).add(aspects));
             }
         }
     }
