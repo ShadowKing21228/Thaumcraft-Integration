@@ -1,0 +1,38 @@
+{
+  "entries": [
+    {
+      "key": "METALPURIFICATION_INTEGRATION",
+      "name": "research.METALPURIFICATION_INTEGRATION.title",
+      "icons": [
+        "thaumcraft:textures/items/cluster_aluminum.png"
+      ],
+      "category": "ALCHEMY",
+      "location": [
+        2,
+        5
+      ],
+      "parents": [
+        "METALPURIFICATION"
+      ],
+      "meta": [ "ROUND" ],
+      "stages": [
+        {
+          "text": "research.METALPURIFICATION.stage.1",
+          "recipes": [
+            "thaumcraft:metal_purification_Aluminum",
+            "thaumcraft:metal_purification_Nickel",
+            "thaumcraft:metal_purification_Realmite",
+            "thaumcraft:metal_purification_Arletimite",
+            "thaumcraft:metal_purification_Rupee",
+            "thaumcraft:metal_purification_Netherite",
+            "thaumcraft:metal_purification_Starmetal",
+            "thaumcraft:metal_purification_Ardite",
+            "thaumcraft:metal_purification_Cobalt",
+            "thaumcraft:metal_purification_Osmium",
+            "thaumcraft:metal_purification_Platinum"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+item.cluster.aluminum.name=Native Aluminum Cluster
+item.cluster.ardite.name=Native Ardite Cluster
+item.cluster.arlemite.name=Native Arlemite Cluster
+item.cluster.cobalt.name=Native Cobalt Cluster
+item.cluster.iridium.name=Native Iridium Cluster
+item.cluster.netherite.name=Native Netherite Cluster
+item.cluster.nickel.name=Native Nickel Cluster
+item.cluster.osmium.name=Native Osmium Cluster
+item.cluster.platinum.name=Native Platinum Cluster
+item.cluster.rupee.name=Native Rupee Cluster
+item.cluster.realmite.name=Native Realmite Cluster
+item.cluster.astralstarmetal.name=Native Starmetal Cluster
+
+research.METALPURIFICATION_INTEGRATION.title=Metal Purification Integration
+research.METALPURIFICATION.stage.1=You realize that the previously discovered clusters are not the only metals to transform. The world is big, and perhaps clusters can be created from other ores as well?

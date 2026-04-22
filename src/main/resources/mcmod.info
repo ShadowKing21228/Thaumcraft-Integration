@@ -1,0 +1,17 @@
+[
+{
+  "modid": "tc_integration",
+  "name": "Thaumcraft Integration",
+  "description": "This mod adds aspect integration between Thaumcraft and other mods. End",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "https://www.curseforge.com/minecraft/mc-mods/thaumcraft-integration",
+  "updateUrl": "",
+  "authorList": ["ShadowKing21"],
+  "credits": "Thanks Azanor for developing Thaumcraft mod",
+  "logoFile": "assets/tc_integration/logo.png",
+  "screenshots": [],
+  "requiredMods": ["thaumcraft@[6.1.BETA26,)"],
+  "dependencies": ["thaumcraft"]
+}
+]

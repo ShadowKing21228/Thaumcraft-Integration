@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "tc_integration:items/cluster_ardite"
+  }
+}

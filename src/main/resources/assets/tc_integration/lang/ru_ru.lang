@@ -1,0 +1,15 @@
+item.cluster.aluminum.name=Самородный кластер алюминия
+item.cluster.ardite.name=Самородный кластер ардита
+item.cluster.arlemite.name=Самородный кластер арлемита
+item.cluster.cobalt.name=Самородный кластер кобальта
+item.cluster.iridium.name=Самородный кластер иридия
+item.cluster.netherite.name=Самородный кластер незерита
+item.cluster.nickel.name=Самородный кластер никеля
+item.cluster.osmium.name=Самородный кластер осмия
+item.cluster.platinum.name=Самородный кластер платины
+item.cluster.rupee.name=Самородный кластер рупия
+item.cluster.realmite.name=Самородный кластер реалмита
+item.cluster.astralstarmetal.name=Самородный кластер звёздного металла
+
+research.METALPURIFICATION_INTEGRATION.title=Интеграция очистки металла
+research.METALPURIFICATION.stage.1=Вы понимаете, что открытые ранее кластеры не являются единственными металлами для преобразования. Мир велик, и, возможно, кластеры можно создать и из других руд?
