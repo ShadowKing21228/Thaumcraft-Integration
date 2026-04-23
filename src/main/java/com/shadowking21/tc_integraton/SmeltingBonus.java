@@ -1,6 +1,5 @@
 package com.shadowking21.tc_integraton;
 
-import com.shadowking21.tc_integraton.Utils.ClusterProcessing;
 import com.shadowking21.tc_integraton.Utils.ItemUtils;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.Loader;
@@ -22,19 +21,6 @@ public class SmeltingBonus {
 
         for (String material : ORE_DICT_BONUS_MATERIALS) {
             addSmeltingBonusFromOreDict("ore" + material, NUGGET_PREFIX + material);
-        }
-
-        if (!Loader.isModLoaded("jaopca")) {
-            for (String s : ClusterProcessing.Material) {
-                if ("AstralStarmetal".equals(s) || "Netherite".equals(s)) {
-                    continue;
-                }
-                addSmeltingBonusFromOreDict("cluster" + s, NUGGET_PREFIX + s);
-            }
-        } else {
-            for (String s : ClusterProcessing.jaopcaMaterial) {
-                addSmeltingBonusFromOreDict("cluster" + s, NUGGET_PREFIX + s);
-            }
         }
 
         if (Loader.isModLoaded("astralsorcery")) {
