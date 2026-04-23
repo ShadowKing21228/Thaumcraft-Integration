@@ -67,13 +67,13 @@ public class WizardryCompat extends CompatClass {
         AspectEventProxy register = event.register;
 
         register.registerObjectTag(new ItemStack(ItemUtils.getRegisteredItem(modId, "magic_crystal")), new AspectList().add(Aspect.CRYSTAL, 3).add(Aspect.MAGIC, 1));
+        register.registerObjectTag(new ItemStack(ItemUtils.getRegisteredItem(modId, "grand_crystal")), new AspectList().add(Aspect.CRYSTAL, 20).add(Aspect.MAGIC, 15));
         register.registerObjectTag(ItemUtils.getRegisteredItemStack(modId, "magic_crystal", 1), new AspectList().add(Aspect.CRYSTAL, 3).add(Aspect.MAGIC, 1).add(Aspect.FIRE, 5));
         register.registerObjectTag(ItemUtils.getRegisteredItemStack(modId, "magic_crystal", 2), new AspectList().add(Aspect.CRYSTAL, 3).add(Aspect.MAGIC, 1).add(Aspect.COLD, 5));
         register.registerObjectTag(ItemUtils.getRegisteredItemStack(modId, "magic_crystal", 3), new AspectList().add(Aspect.CRYSTAL, 3).add(Aspect.MAGIC, 1).add(Aspect.ENERGY, 5));
         register.registerObjectTag(ItemUtils.getRegisteredItemStack(modId, "magic_crystal", 4), new AspectList().add(Aspect.CRYSTAL, 3).add(Aspect.MAGIC, 1).add(Aspect.DARKNESS, 5));
         register.registerObjectTag(ItemUtils.getRegisteredItemStack(modId, "magic_crystal", 5), new AspectList().add(Aspect.CRYSTAL, 3).add(Aspect.MAGIC, 1).add(Aspect.LIFE, 5));
         register.registerObjectTag(ItemUtils.getRegisteredItemStack(modId, "magic_crystal", 6), new AspectList().add(Aspect.CRYSTAL, 3).add(Aspect.MAGIC, 1).add(Aspect.AURA, 5));
-        register.registerObjectTag(new ItemStack(ItemUtils.getRegisteredItem(modId, "grand_crystal")), new AspectList().add(Aspect.CRYSTAL, 20).add(Aspect.MAGIC, 15));
 
         register.registerObjectTag(new ItemStack(ItemUtils.getRegisteredItem(modId, "crystal_flower")), new AspectList().add(Aspect.PLANT, 3).add(Aspect.SENSES, 3).add(Aspect.CRYSTAL, 1).add(Aspect.MAGIC, 1));
 

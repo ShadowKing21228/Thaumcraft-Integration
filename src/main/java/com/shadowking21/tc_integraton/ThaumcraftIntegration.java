@@ -11,7 +11,6 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
-import org.apache.logging.log4j.Logger;
 import thaumcraft.api.ThaumcraftApi;
 
 @Mod(modid = ThaumcraftIntegration.MODID, name = ThaumcraftIntegration.NAME, version = ThaumcraftIntegration.VERSION)
@@ -21,7 +20,7 @@ public class ThaumcraftIntegration
 
     public static final String NAME = "Thaumcraft Integration";
 
-    public static final String VERSION = "1.3-1.12.2";
+    public static final String VERSION = "1.4-1.12.2";
 
     //private static Logger logger;
 
