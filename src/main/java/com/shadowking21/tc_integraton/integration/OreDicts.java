@@ -1,6 +1,6 @@
-package com.shadowking21.tc_integraton.OreDicts;
+package com.shadowking21.tc_integraton.integration;
 
-import com.shadowking21.tc_integraton.Utils.AspectMetalProcessing;
+import com.shadowking21.tc_integraton.utils.AspectMetalProcessing;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import thaumcraft.api.aspects.Aspect;
 import thaumcraft.api.aspects.AspectEventProxy;

@@ -1,13 +1,16 @@
-package com.shadowking21.tc_integraton.Utils;
+package com.shadowking21.tc_integraton.utils;
 
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
+import thaumcraft.api.aspects.Aspect;
+import thaumcraft.api.aspects.AspectList;
 
 import javax.annotation.Nullable;
 import java.util.*;
 
 public class ItemUtils {
+
     public static final Map<String, List<String>> ITEMSLIST = new HashMap<>();
 
     public static List<ItemStack> getItems() {
@@ -82,4 +85,13 @@ public class ItemUtils {
         return astring;
     }
 
+    public static AspectList MultiplyAspectList(AspectList list, int multiplier)
+    {
+        AspectList newList = new AspectList();
+        for (Aspect aspect : list.getAspects())
+        {
+            newList.add(aspect, list.getAmount(aspect) * multiplier);
+        }
+        return newList;
+    }
 }

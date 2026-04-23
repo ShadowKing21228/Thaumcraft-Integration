@@ -1,0 +1,50 @@
+{
+  "entries": [
+    {
+      "key": "METALPURIFICATIONINTEGRATION",
+      "name": "research.metalint.title",
+      "category": "ALCHEMY",
+      "location": [
+        2,
+        6
+      ],
+      "icons": [
+        "tc_integration:cluster_aluminum",
+        "tc_integration:cluster_astralstarmetal",
+        "tc_integration:cluster_netherite",
+        "tc_integration:cluster_rupee",
+        "tc_integration:cluster_realmite",
+        "tc_integration:cluster_platinum",
+        "tc_integration:cluster_iridium",
+        "tc_integration:cluster_cobalt",
+        "tc_integration:cluster_arlemite",
+        "tc_integration:cluster_ardite",
+        "tc_integration:cluster_nickel",
+        "tc_integration:cluster_osmium"
+      ],
+      "parents": [
+        "METALPURIFICATION"
+      ],
+      "meta": [ "ROUND" ],
+      "stages": [
+        {
+          "text": "research.metalint.stage.1",
+          "recipes": [
+            "thaumcraft:metal_purification_Aluminum",
+            "thaumcraft:metal_purification_Nickel",
+            "thaumcraft:metal_purification_Cobalt",
+            "thaumcraft:metal_purification_Iridium",
+            "thaumcraft:metal_purification_Osmium",
+            "thaumcraft:metal_purification_Platinum",
+            "thaumcraft:metal_purification_Ardite",
+            "thaumcraft:metal_purification_Arlemite",
+            "thaumcraft:metal_purification_Realmite",
+            "thaumcraft:metal_purification_Rupee",
+            "thaumcraft:metal_purification_Netherite",
+            "thaumcraft:metal_purification_AstralStarmetal"
+          ]
+        }
+      ]
+    }
+  ]
+}

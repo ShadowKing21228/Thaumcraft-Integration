@@ -1,0 +1,145 @@
+package com.shadowking21.tc_integraton.integration.direct;
+
+import com.shadowking21.tc_integraton.utils.AspectRegister;
+import com.shadowking21.tc_integraton.utils.ItemUtils;
+import net.minecraft.item.ItemStack;
+import net.minecraft.nbt.NBTTagCompound;
+import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import thaumcraft.api.aspects.Aspect;
+import thaumcraft.api.aspects.AspectEventProxy;
+import thaumcraft.api.aspects.AspectList;
+import thaumcraft.api.aspects.AspectRegistryEvent;
+
+public class BloodMagicCompat extends CompatClass {
+
+    @Override
+    protected String getModId() {
+        return "bloodmagic";
+    }
+
+    @SubscribeEvent
+    public void aspectRegistrationEvent(AspectRegistryEvent event)
+    {
+        AspectEventProxy register = event.register;
+        register.registerObjectTag(new ItemStack(ItemUtils.getRegisteredItem(modId, "blood_shard")), new AspectList().add(Aspect.LIFE, 10).add(Aspect.ENTROPY, 10));
+        register.registerObjectTag(ItemUtils.getRegisteredItemStack(modId, "blood_shard", 1), new AspectList().add(Aspect.LIFE, 25).add(Aspect.ENTROPY, 25).add(Aspect.SOUL, 25).add(Aspect.ENERGY, 25));
+        register.registerObjectTag(new ItemStack(ItemUtils.getRegisteredItem(modId, "altar")), new AspectList().add(Aspect.EARTH, 25).add(Aspect.LIFE, 20).add(Aspect.DESIRE, 15).add(Aspect.MAGIC, 10).add(Aspect.SOUL, 5).add(Aspect.ENERGY, 5));
+        register.registerObjectTag(new ItemStack(ItemUtils.getRegisteredItem(modId, "monster_soul")), new AspectList().add(Aspect.SOUL, 5).add(Aspect.ENERGY, 5));
+        register.registerObjectTag(new ItemStack(ItemUtils.getRegisteredItem(modId, "upgrade_tome")), new AspectList().add(Aspect.MIND, 5).add(Aspect.BEAST, 5));
+        register.registerObjectTag(ItemUtils.getRegisteredItemStack(modId, "monster_soul", 1), new AspectList().add(Aspect.SOUL, 5).add(Aspect.ENERGY, 5).add(Aspect.FLUX, 5));
+        register.registerObjectTag(ItemUtils.getRegisteredItemStack(modId, "monster_soul", 2), new AspectList().add(Aspect.SOUL, 5).add(Aspect.ENERGY, 5).add(Aspect.ENTROPY, 5));
+        register.registerObjectTag(ItemUtils.getRegisteredItemStack(modId, "monster_soul", 3), new AspectList().add(Aspect.SOUL, 5).add(Aspect.ENERGY, 5).add(Aspect.AVERSION, 5));
+        register.registerObjectTag(ItemUtils.getRegisteredItemStack(modId, "monster_soul", 4), new AspectList().add(Aspect.SOUL, 5).add(Aspect.ENERGY, 5).add(Aspect.PROTECT, 5));
+        register.registerObjectTag(new ItemStack(ItemUtils.getRegisteredItem(modId, "slate")), new AspectList().add(Aspect.EARTH, 5).add(Aspect.LIFE, 3).add(Aspect.MAGIC, 1));
+        register.registerObjectTag(new ItemStack(ItemUtils.getRegisteredItem(modId, "teleposition_focus")), new AspectList().add(Aspect.MOTION, 15).add(Aspect.ELDRITCH, 15).add(Aspect.MAGIC, 10).add(Aspect.LIFE, 10));
+        register.registerObjectTag(ItemUtils.getRegisteredItemStack(modId, "teleposition_focus", 1), new AspectList().add(Aspect.MOTION, 20).add(Aspect.ELDRITCH, 20).add(Aspect.MAGIC, 20).add(Aspect.LIFE, 20));
+        register.registerObjectTag(ItemUtils.getRegisteredItemStack(modId, "teleposition_focus", 2), new AspectList().add(Aspect.MOTION, 25).add(Aspect.ELDRITCH, 25).add(Aspect.MAGIC, 25).add(Aspect.LIFE, 25));
+        register.registerObjectTag(ItemUtils.getRegisteredItemStack(modId, "teleposition_focus", 3), new AspectList().add(Aspect.MOTION, 30).add(Aspect.ELDRITCH, 30).add(Aspect.MAGIC, 30).add(Aspect.LIFE, 30).add(Aspect.SOUL, 30).add(Aspect.ENERGY, 30));
+        register.registerObjectTag(ItemUtils.getRegisteredItemStack(modId, "slate", 1), new AspectList().add(Aspect.EARTH, 5).add(Aspect.LIFE, 5).add(Aspect.MAGIC, 3));
+        register.registerObjectTag(ItemUtils.getRegisteredItemStack(modId, "slate", 2), new AspectList().add(Aspect.LIFE, 10).add(Aspect.EARTH, 5).add(Aspect.MAGIC, 5));
+        register.registerObjectTag(ItemUtils.getRegisteredItemStack(modId, "slate", 3), new AspectList().add(Aspect.LIFE, 20).add(Aspect.MAGIC, 10).add(Aspect.EARTH, 5));
+        register.registerObjectTag(ItemUtils.getRegisteredItemStack(modId, "slate", 4), new AspectList().add(Aspect.LIFE, 30).add(Aspect.MAGIC, 25).add(Aspect.EARTH, 5));
+        register.registerObjectTag(ItemUtils.getRegisteredItemStack(modId, "soul_gem", 0), new AspectList().add(Aspect.SOUL, 10).add(Aspect.TRAP, 10).add(Aspect.CRYSTAL, 5).add(Aspect.ENERGY, 5));
+        register.registerObjectTag(ItemUtils.getRegisteredItemStack(modId, "soul_gem", 1), new AspectList().add(Aspect.SOUL, 15).add(Aspect.TRAP, 15).add(Aspect.CRYSTAL, 10).add(Aspect.ENERGY, 10).add(Aspect.DESIRE, 10));
+        register.registerObjectTag(ItemUtils.getRegisteredItemStack(modId, "soul_gem", 2), new AspectList().add(Aspect.SOUL, 25).add(Aspect.TRAP, 25).add(Aspect.CRYSTAL, 20).add(Aspect.DESIRE, 20).add(Aspect.ENERGY, 10));
+        register.registerObjectTag(ItemUtils.getRegisteredItemStack(modId, "soul_gem", 3), new AspectList().add(Aspect.SOUL, 40).add(Aspect.TRAP, 40).add(Aspect.CRYSTAL, 30).add(Aspect.DESIRE, 20).add(Aspect.ENERGY, 10).add(Aspect.LIFE, 10));
+        register.registerObjectTag(ItemUtils.getRegisteredItemStack(modId, "soul_gem", 4), new AspectList().add(Aspect.SOUL, 75).add(Aspect.TRAP, 75).add(Aspect.CRYSTAL, 50).add(Aspect.DESIRE, 20).add(Aspect.LIFE, 20).add(Aspect.MAGIC, 20).add(Aspect.ENERGY, 10));
+        register.registerObjectTag(new ItemStack(ItemUtils.getRegisteredItem(modId, "arcane_ashes")), new AspectList().add(Aspect.ENTROPY, 5).add(Aspect.ALCHEMY, 5).add(Aspect.ENERGY, 5).add(Aspect.MAGIC, 5));
+        register.registerObjectTag(ItemUtils.getRegisteredItemStack(modId, "component", 0), new AspectList().add(Aspect.WATER, 10).add(Aspect.ALCHEMY, 5));
+        register.registerObjectTag(new ItemStack(ItemUtils.getRegisteredItem(modId, "sigil_water")), new AspectList().add(Aspect.WATER, 10).add(Aspect.EARTH, 5).add(Aspect.LIFE, 3).add(Aspect.MAGIC, 1));
+        register.registerObjectTag(ItemUtils.getRegisteredItemStack(modId, "component", 1), new AspectList().add(Aspect.FIRE, 25).add(Aspect.ALCHEMY, 5));
+        register.registerObjectTag(new ItemStack(ItemUtils.getRegisteredItem(modId, "sigil_lava")), new AspectList().add(Aspect.FIRE, 25).add(Aspect.EARTH, 5).add(Aspect.LIFE, 3).add(Aspect.MAGIC, 1));
+        register.registerObjectTag(ItemUtils.getRegisteredItemStack(modId, "component", 2), new AspectList().add(Aspect.AIR, 10).add(Aspect.FLIGHT, 5).add(Aspect.ALCHEMY, 5));
+        register.registerObjectTag(new ItemStack(ItemUtils.getRegisteredItem(modId, "sigil_air")), new AspectList().add(Aspect.AIR, 10).add(Aspect.FLIGHT, 5).add(Aspect.EARTH, 5).add(Aspect.LIFE, 5).add(Aspect.MAGIC, 3));
+        register.registerObjectTag(ItemUtils.getRegisteredItemStack(modId, "component", 3), new AspectList().add(Aspect.TOOL, 25).add(Aspect.ALCHEMY, 5));
+        register.registerObjectTag(new ItemStack(ItemUtils.getRegisteredItem(modId, "sigil_fast_miner")), new AspectList().add(Aspect.TOOL, 25).add(Aspect.EARTH, 5).add(Aspect.LIFE, 5).add(Aspect.MAGIC, 3));
+        register.registerObjectTag(ItemUtils.getRegisteredItemStack(modId, "component", 4), new AspectList().add(Aspect.VOID, 10).add(Aspect.ENTROPY, 5).add(Aspect.ALCHEMY, 5));
+        register.registerObjectTag(new ItemStack(ItemUtils.getRegisteredItem(modId, "sigil_void")), new AspectList().add(Aspect.VOID, 10).add(Aspect.LIFE, 10).add(Aspect.ENTROPY, 5).add(Aspect.EARTH, 5).add(Aspect.MAGIC, 5));
+        register.registerObjectTag(ItemUtils.getRegisteredItemStack(modId, "component", 5), new AspectList().add(Aspect.PLANT, 25).add(Aspect.LIFE, 10).add(Aspect.ALCHEMY, 5));
+        register.registerObjectTag(new ItemStack(ItemUtils.getRegisteredItem(modId, "sigil_green_grove")), new AspectList().add(Aspect.PLANT, 25).add(Aspect.LIFE, 10).add(Aspect.LIFE, 10).add(Aspect.EARTH, 5).add(Aspect.MAGIC, 5));
+        register.registerObjectTag(ItemUtils.getRegisteredItemStack(modId, "component", 6), new AspectList().add(Aspect.ALCHEMY, 20).add(Aspect.FIRE, 10).add(Aspect.WATER, 10).add(Aspect.AIR, 10).add(Aspect.ENERGY, 10));
+        register.registerObjectTag(new ItemStack(ItemUtils.getRegisteredItem(modId, "sigil_elemental_affinity")), new AspectList().add(Aspect.FIRE, 10).add(Aspect.WATER, 10).add(Aspect.AIR, 10).add(Aspect.ENERGY, 10).add(Aspect.LIFE, 20).add(Aspect.MAGIC, 10).add(Aspect.EARTH, 5));
+        register.registerObjectTag(new ItemStack(ItemUtils.getRegisteredItem(modId, "sigil_divination")), new AspectList().add(Aspect.EARTH, 5).add(Aspect.SENSES, 5).add(Aspect.LIFE, 3).add(Aspect.MAGIC, 1));
+        register.registerObjectTag(ItemUtils.getRegisteredItemStack(modId, "component", 7), new AspectList().add(Aspect.SENSES, 10).add(Aspect.CRYSTAL, 5).add(Aspect.ALCHEMY, 5));
+        register.registerObjectTag(new ItemStack(ItemUtils.getRegisteredItem(modId, "sigil_seer")), new AspectList().add(Aspect.SENSES, 10).add(Aspect.CRYSTAL, 5).add(Aspect.EARTH, 5).add(Aspect.LIFE, 5).add(Aspect.MAGIC, 3));
+        register.registerObjectTag(ItemUtils.getRegisteredItemStack(modId, "component", 9), new AspectList().add(Aspect.VOID, 25).add(Aspect.ALCHEMY, 5));
+        register.registerObjectTag(ItemUtils.getRegisteredItemStack(modId, "component", 8), new AspectList().add(Aspect.LIFE, 10).add(Aspect.SOUL, 10).add(Aspect.AVERSION, 5).add(Aspect.ALCHEMY, 5));
+        register.registerObjectTag(new ItemStack(ItemUtils.getRegisteredItem(modId, "sigil_suppression")), new AspectList().add(Aspect.VOID, 25).add(Aspect.LIFE, 20).add(Aspect.MAGIC, 10).add(Aspect.EARTH, 5));
+        register.registerObjectTag(ItemUtils.getRegisteredItemStack(modId, "component", 13), new AspectList().add(Aspect.AIR, 10).add(Aspect.MOTION, 10).add(Aspect.ALCHEMY, 5));
+        register.registerObjectTag(new ItemStack(ItemUtils.getRegisteredItem(modId, "sigil_haste")), new AspectList().add(Aspect.LIFE, 20).add(Aspect.MAGIC, 10).add(Aspect.AIR, 10).add(Aspect.MOTION, 10).add(Aspect.EARTH, 5));
+        register.registerObjectTag(ItemUtils.getRegisteredItemStack(modId, "component", 11), new AspectList().add(Aspect.LIGHT, 25).add(Aspect.ENERGY, 5).add(Aspect.ALCHEMY, 5));
+        register.registerObjectTag(new ItemStack(ItemUtils.getRegisteredItem(modId, "sigil_blood_light")), new AspectList().add(Aspect.LIGHT, 25).add(Aspect.LIFE, 10).add(Aspect.MAGIC, 5).add(Aspect.ENERGY, 5).add(Aspect.EARTH, 5));
+        register.registerObjectTag(ItemUtils.getRegisteredItemStack(modId, "component", 15), new AspectList().add(Aspect.AIR, 10).add(Aspect.SOUL, 10).add(Aspect.ALCHEMY, 5));
+        register.registerObjectTag(new ItemStack(ItemUtils.getRegisteredItem(modId, "sigil_phantom_bridge")), new AspectList().add(Aspect.LIFE, 20).add(Aspect.MAGIC, 10).add(Aspect.AIR, 10).add(Aspect.SOUL, 10).add(Aspect.EARTH, 5));
+        register.registerObjectTag(ItemUtils.getRegisteredItemStack(modId, "component", 16), new AspectList().add(Aspect.MOTION, 25).add(Aspect.TRAP, 25).add(Aspect.ALCHEMY, 5));
+        register.registerObjectTag(new ItemStack(ItemUtils.getRegisteredItem(modId, "sigil_ender_severance")), new AspectList().add(Aspect.MOTION, 25).add(Aspect.TRAP, 25).add(Aspect.LIFE, 20).add(Aspect.MAGIC, 10).add(Aspect.EARTH, 5));
+        register.registerObjectTag(ItemUtils.getRegisteredItemStack(modId, "component", 17), new AspectList().add(Aspect.MOTION, 25).add(Aspect.ELDRITCH, 25).add(Aspect.ALCHEMY, 5));
+        register.registerObjectTag(new ItemStack(ItemUtils.getRegisteredItem(modId, "sigil_teleposition")), new AspectList().add(Aspect.MOTION, 25).add(Aspect.ELDRITCH, 25).add(Aspect.LIFE, 20).add(Aspect.MAGIC, 10).add(Aspect.EARTH, 5));
+        register.registerObjectTag(ItemUtils.getRegisteredItemStack(modId, "component", 18), new AspectList().add(Aspect.MOTION, 25).add(Aspect.ELDRITCH, 25).add(Aspect.ALCHEMY, 5));
+        register.registerObjectTag(new ItemStack(ItemUtils.getRegisteredItem(modId, "sigil_transposition")), new AspectList().add(Aspect.MOTION, 25).add(Aspect.ELDRITCH, 25).add(Aspect.LIFE, 20).add(Aspect.MAGIC, 10).add(Aspect.EARTH, 5));
+        register.registerObjectTag(ItemUtils.getRegisteredItemStack(modId, "component", 27), new AspectList().add(Aspect.VOID, 10).add(Aspect.EXCHANGE, 10).add(Aspect.ALCHEMY, 5));
+        register.registerObjectTag(new ItemStack(ItemUtils.getRegisteredItem(modId, "sigil_holding")), new AspectList().add(Aspect.VOID, 10).add(Aspect.EXCHANGE, 10).add(Aspect.LIFE, 10).add(Aspect.EARTH, 5).add(Aspect.MAGIC, 5));
+        register.registerObjectTag(ItemUtils.getRegisteredItemStack(modId, "component", 30), new AspectList().add(Aspect.TOOL, 10).add(Aspect.MOTION, 10).add(Aspect.ALCHEMY, 5));
+        register.registerObjectTag(new ItemStack(ItemUtils.getRegisteredItem(modId, "sigil_claw")), new AspectList().add(Aspect.TOOL, 10).add(Aspect.MOTION, 10).add(Aspect.LIFE, 10).add(Aspect.MAGIC, 5).add(Aspect.EARTH, 5));
+        register.registerObjectTag(ItemUtils.getRegisteredItemStack(modId, "component", 31), new AspectList().add(Aspect.WATER, 25).add(Aspect.ALCHEMY, 25));
+        register.registerObjectTag(new ItemStack(ItemUtils.getRegisteredItem(modId, "sigil_bounce")), new AspectList().add(Aspect.WATER, 25).add(Aspect.ALCHEMY, 25).add(Aspect.EARTH, 5).add(Aspect.LIFE, 5).add(Aspect.MAGIC, 3));
+        register.registerObjectTag(ItemUtils.getRegisteredItemStack(modId, "component", 32), new AspectList().add(Aspect.COLD, 25).add(Aspect.ALCHEMY, 5));
+        register.registerObjectTag(new ItemStack(ItemUtils.getRegisteredItem(modId, "sigil_frost")), new AspectList().add(Aspect.COLD, 25).add(Aspect.EARTH, 5).add(Aspect.LIFE, 5).add(Aspect.MAGIC, 3));
+        register.registerObjectTag(ItemUtils.getRegisteredItemStack(modId, "component", 14), new AspectList().add(Aspect.EXCHANGE, 25).add(Aspect.ORDER, 10).add(Aspect.ALCHEMY, 5));
+        register.registerObjectTag(new ItemStack(ItemUtils.getRegisteredItem(modId, "sigil_compression")), new AspectList().add(Aspect.EXCHANGE, 25).add(Aspect.ORDER, 10).add(Aspect.LIFE, 20).add(Aspect.MAGIC, 10).add(Aspect.EARTH, 5));
+        register.registerObjectTag(ItemUtils.getRegisteredItemStack(modId, "component", 10), new AspectList().add(Aspect.EARTH, 10).add(Aspect.CRYSTAL, 10).add(Aspect.ENERGY, 5));
+        register.registerObjectTag(ItemUtils.getRegisteredItemStack(modId, "component", 26), new AspectList().add(Aspect.WATER, 5).add(Aspect.ORDER, 5).add(Aspect.ALCHEMY, 5));
+        register.registerObjectTag(ItemUtils.getRegisteredItemStack(modId, "component", 22), new AspectList().add(Aspect.WATER, 5).add(Aspect.PLANT, 5).add(Aspect.ALCHEMY, 5));
+        register.registerObjectTag(ItemUtils.getRegisteredItemStack(modId, "cutting_fluid", 0), new AspectList().add(Aspect.ENERGY, 5).add(Aspect.WATER, 5).add(Aspect.DESIRE, 5).add(Aspect.ALCHEMY, 5));
+        register.registerObjectTag(ItemUtils.getRegisteredItemStack(modId, "component", 25), new AspectList().add(Aspect.WATER, 5).add(Aspect.ENTROPY, 5).add(Aspect.DEATH, 5).add(Aspect.FLUX, 5).add(Aspect.ALCHEMY, 5));
+        register.registerObjectTag(ItemUtils.getRegisteredItemStack(modId, "points_upgrade", 0), new AspectList().add(Aspect.WATER, 10).add(Aspect.ENTROPY, 10).add(Aspect.LIFE, 10).add(Aspect.DESIRE, 10).add(Aspect.FLUX, 5).add(Aspect.ALCHEMY, 10));
+        register.registerObjectTag(ItemUtils.getRegisteredItemStack(modId, "item_demon_crystal", 0), new AspectList().add(Aspect.CRYSTAL, 10).add(Aspect.SOUL, 10).add(Aspect.ENERGY, 10));
+        register.registerObjectTag(ItemUtils.getRegisteredItemStack(modId, "item_demon_crystal", 1), new AspectList().add(Aspect.CRYSTAL, 10).add(Aspect.SOUL, 10).add(Aspect.ENERGY, 10).add(Aspect.FLUX, 10));
+        register.registerObjectTag(ItemUtils.getRegisteredItemStack(modId, "item_demon_crystal", 2), new AspectList().add(Aspect.CRYSTAL, 10).add(Aspect.SOUL, 10).add(Aspect.ENERGY, 10).add(Aspect.ENTROPY, 10));
+        register.registerObjectTag(ItemUtils.getRegisteredItemStack(modId, "item_demon_crystal", 3), new AspectList().add(Aspect.CRYSTAL, 10).add(Aspect.SOUL, 10).add(Aspect.ENERGY, 10).add(Aspect.AVERSION, 10));
+        register.registerObjectTag(ItemUtils.getRegisteredItemStack(modId, "item_demon_crystal", 4), new AspectList().add(Aspect.CRYSTAL, 10).add(Aspect.SOUL, 10).add(Aspect.ENERGY, 10).add(Aspect.PROTECT, 10));
+        register.registerObjectTag(ItemUtils.getRegisteredItemStack(modId, "demon_crystal", 0), new AspectList().add(Aspect.CRYSTAL, 10).add(Aspect.SOUL, 10).add(Aspect.ENERGY, 10));
+        register.registerObjectTag(ItemUtils.getRegisteredItemStack(modId, "demon_crystal", 1), new AspectList().add(Aspect.CRYSTAL, 10).add(Aspect.SOUL, 10).add(Aspect.ENERGY, 10).add(Aspect.FLUX, 10));
+        register.registerObjectTag(ItemUtils.getRegisteredItemStack(modId, "demon_crystal", 2), new AspectList().add(Aspect.CRYSTAL, 10).add(Aspect.SOUL, 10).add(Aspect.ENERGY, 10).add(Aspect.ENTROPY, 10));
+        register.registerObjectTag(ItemUtils.getRegisteredItemStack(modId, "demon_crystal", 3), new AspectList().add(Aspect.CRYSTAL, 10).add(Aspect.SOUL, 10).add(Aspect.ENERGY, 10).add(Aspect.AVERSION, 10));
+        register.registerObjectTag(ItemUtils.getRegisteredItemStack(modId, "demon_crystal", 4), new AspectList().add(Aspect.CRYSTAL, 10).add(Aspect.SOUL, 10).add(Aspect.ENERGY, 10).add(Aspect.PROTECT, 10));
+        register.registerObjectTag(new ItemStack(ItemUtils.getRegisteredItem(modId, "soul_forge")), new AspectList().add(Aspect.EARTH, 25).add(Aspect.FIRE, 15).add(Aspect.METAL, 25).add(Aspect.SOUL, 10).add(Aspect.TRAP, 10));
+        register.registerObjectTag(new ItemStack(ItemUtils.getRegisteredItem(modId, "demon_crucible")), new AspectList().add(Aspect.METAL, 30).add(Aspect.EARTH, 25).add(Aspect.FIRE, 25).add(Aspect.ALCHEMY, 25).add(Aspect.SOUL, 10));
+        register.registerObjectTag(new ItemStack(ItemUtils.getRegisteredItem(modId, "demon_pylon")), new AspectList().add(Aspect.METAL, 30).add(Aspect.EARTH, 25).add(Aspect.SOUL, 10));
+        register.registerObjectTag(new ItemStack(ItemUtils.getRegisteredItem(modId, "blood_crystallizer")), new AspectList().add(Aspect.EARTH, 25).add(Aspect.FIRE, 15).add(Aspect.METAL, 25).add(Aspect.SOUL, 10).add(Aspect.CRYSTAL, 10));
+        register.registerObjectTag(new ItemStack(ItemUtils.getRegisteredItem(modId, "blood_shard")), new AspectList().add(Aspect.LIFE, 10).add(Aspect.ENTROPY, 10));
+        register.registerObjectTag(ItemUtils.getRegisteredItemStack(modId, "inscription_tool", 1), new AspectList().add(Aspect.AURA, 10).add(Aspect.TOOL, 10).add(Aspect.WATER, 10));
+        register.registerObjectTag(ItemUtils.getRegisteredItemStack(modId, "inscription_tool", 2), new AspectList().add(Aspect.AURA, 10).add(Aspect.TOOL, 10).add(Aspect.FIRE, 10));
+        register.registerObjectTag(ItemUtils.getRegisteredItemStack(modId, "inscription_tool", 3), new AspectList().add(Aspect.AURA, 10).add(Aspect.TOOL, 10).add(Aspect.EARTH, 10));
+        register.registerObjectTag(ItemUtils.getRegisteredItemStack(modId, "inscription_tool", 4), new AspectList().add(Aspect.AURA, 10).add(Aspect.TOOL, 10).add(Aspect.AIR, 10));
+        register.registerObjectTag(ItemUtils.getRegisteredItemStack(modId, "inscription_tool", 5), new AspectList().add(Aspect.AURA, 10).add(Aspect.TOOL, 10).add(Aspect.DARKNESS, 10));
+        register.registerObjectTag(new ItemStack(ItemUtils.getRegisteredItem(modId, "bound_sword")), new AspectList().add(Aspect.AVERSION, 36).add(Aspect.LIFE, 25).add(Aspect.CRYSTAL, 20).add(Aspect.DESIRE, 20).add(Aspect.SOUL, 10));
+        register.registerObjectTag(new ItemStack(ItemUtils.getRegisteredItem(modId, "bound_pickaxe")), new AspectList().add(Aspect.LIFE, 25).add(Aspect.TOOL, 20).add(Aspect.CRYSTAL, 20).add(Aspect.DESIRE, 20).add(Aspect.SOUL, 10));
+        register.registerObjectTag(new ItemStack(ItemUtils.getRegisteredItem(modId, "bound_axe")), new AspectList().add(Aspect.LIFE, 25).add(Aspect.TOOL, 20).add(Aspect.CRYSTAL, 20).add(Aspect.DESIRE, 20).add(Aspect.SOUL, 10));
+        register.registerObjectTag(new ItemStack(ItemUtils.getRegisteredItem(modId, "bound_shovel")), new AspectList().add(Aspect.LIFE, 25).add(Aspect.TOOL, 20).add(Aspect.CRYSTAL, 20).add(Aspect.DESIRE, 20).add(Aspect.SOUL, 10));
+        register.registerObjectTag(new ItemStack(ItemUtils.getRegisteredItem(modId, "living_armour_helmet")), new AspectList().add(Aspect.METAL, 45).add(Aspect.LIFE, 25).add(Aspect.PROTECT, 10).add(Aspect.SOUL, 10));
+        register.registerObjectTag(new ItemStack(ItemUtils.getRegisteredItem(modId, "living_armour_chest")), new AspectList().add(Aspect.METAL, 70).add(Aspect.LIFE, 25).add(Aspect.PROTECT, 20).add(Aspect.SOUL, 10));
+        register.registerObjectTag(new ItemStack(ItemUtils.getRegisteredItem(modId, "living_armour_leggings")), new AspectList().add(Aspect.METAL, 60).add(Aspect.LIFE, 25).add(Aspect.PROTECT, 15).add(Aspect.SOUL, 10));
+        register.registerObjectTag(new ItemStack(ItemUtils.getRegisteredItem(modId, "living_armour_boots")), new AspectList().add(Aspect.METAL, 40).add(Aspect.LIFE, 25).add(Aspect.PROTECT, 10).add(Aspect.SOUL, 10));
+        register.registerObjectTag(new ItemStack(ItemUtils.getRegisteredItem(modId, "sentient_armour_gem")), new AspectList().add(Aspect.METAL, 80).add(Aspect.PROTECT, 35).add(Aspect.CRYSTAL, 20).add(Aspect.DESIRE, 20).add(Aspect.SOUL, 20));
+        register.registerObjectTag(new ItemStack(ItemUtils.getRegisteredItem(modId, "soul_snare")), new AspectList().add(Aspect.METAL, 5).add(Aspect.BEAST, 5).add(Aspect.TRAP, 5));
+        NBTTagCompound nbtTag = new NBTTagCompound();
+        nbtTag.setString("orb", "bloodmagic:weak");
+        ItemStack weakorb = new ItemStack(ItemUtils.getRegisteredItem(modId, "blood_orb"));
+        weakorb.setTagCompound(nbtTag);
+        register.registerComplexObjectTag(weakorb, new AspectList().add(Aspect.CRYSTAL, 10).add(Aspect.DESIRE, 10).add(Aspect.LIFE, 10).add(Aspect.MAGIC, 5));
+        nbtTag.setString("orb", "bloodmagic:apprentice");
+        weakorb.setTagCompound(nbtTag);
+        register.registerComplexObjectTag(weakorb, new AspectList().add(Aspect.ENERGY, 25).add(Aspect.LIFE, 15).add(Aspect.MAGIC, 10));
+        nbtTag.setString("orb", "bloodmagic:magician");
+        weakorb.setTagCompound(nbtTag);
+        register.registerComplexObjectTag(weakorb, new AspectList().add(Aspect.METAL, 30).add(Aspect.DESIRE, 30).add(Aspect.LIFE, 20).add(Aspect.MAGIC, 15));
+        nbtTag.setString("orb", "bloodmagic:master");
+        weakorb.setTagCompound(nbtTag);
+        register.registerComplexObjectTag(weakorb, new AspectList().add(Aspect.LIFE, 25).add(Aspect.MAGIC, 20).add(Aspect.ENTROPY, 10));
+        nbtTag.setString("orb", "bloodmagic:archmage");
+        weakorb.setTagCompound(nbtTag);
+        register.registerComplexObjectTag(weakorb, new AspectList().add(Aspect.MAGIC, 40).add(Aspect.LIFE, 30).add(Aspect.ORDER, 20).add(Aspect.AURA, 10).add(Aspect.ELDRITCH, 10));
+        AspectRegister.registerFluidAspect(register, "lifeessence", new AspectList().add(Aspect.WATER, 10).add(Aspect.LIFE, 10));
+    }
+}

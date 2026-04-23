@@ -11,5 +11,5 @@ item.cluster.rupee.name=Native Rupee Cluster
 item.cluster.realmite.name=Native Realmite Cluster
 item.cluster.astralstarmetal.name=Native Starmetal Cluster
 
-research.METALPURIFICATION_INTEGRATION.title=Metal Purification Integration
-research.METALPURIFICATION.stage.1=You realize that the previously discovered clusters are not the only metals to transform. The world is big, and perhaps clusters can be created from other ores as well?
+research.metalint.title=Metal Purification Integration
+research.metalint.stage.1=You realize that the previously discovered clusters are not the only metals to transform. The world is big, and perhaps clusters can be created from other ores as well?

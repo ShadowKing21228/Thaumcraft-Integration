@@ -1,6 +1,6 @@
 package com.shadowking21.tc_integraton;
 
-import com.shadowking21.tc_integraton.Utils.ItemUtils;
+import com.shadowking21.tc_integraton.utils.ItemUtils;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.oredict.OreDictionary;
@@ -9,11 +9,13 @@ import thaumcraft.api.ThaumcraftApi;
 import java.util.List;
 
 public class SmeltingBonus {
+
     private static final String[] ORE_DICT_BONUS_MATERIALS = {
             "Nickel", "Iridium", "Aluminum", "Platinum", "Mithril", "Diamond", "Uranium", "Osmium",
             "Emerald", "Rupee", "Arlemite", "Realmite", "Cobalt", "Ardite"
     };
     private static final String[] DIVINE_ORE_DICT = {"Eden", "Apalachia", "Wildwood", "Skythern", "Mortum"};
+
     private static final String NUGGET_PREFIX = "nugget";
 
     public static void SmeltBonus() {

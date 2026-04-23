@@ -74,10 +74,13 @@ dependencies {
     compileOnly fg.deobf('curse.maven:astral-sorcery-241721:3044416')
     runtimeOnly fg.deobf('curse.maven:astral-sorcery-241721:3044416')
 
+    runtimeOnly fg.deobf("curse.maven:electroblobs-wizardry-265642:3757344")
+
     compileOnly fg.deobf('curse.maven:baubles-227083:2518667')
     runtimeOnly fg.deobf('curse.maven:baubles-227083:2518667')
 
     runtimeOnly fg.deobf("curse.maven:jei-238222:5846804")
+    runtimeOnly fg.deobf("curse.maven:thaumic-jei-285492:5646810")
 
     runtimeOnly 'com.github.RedServer:ForgeSideFix:1.12.2-1.0'
 }

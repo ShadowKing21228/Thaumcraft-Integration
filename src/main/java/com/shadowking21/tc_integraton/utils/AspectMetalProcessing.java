@@ -1,4 +1,4 @@
-package com.shadowking21.tc_integraton.Utils;
+package com.shadowking21.tc_integraton.utils;
 
 import thaumcraft.api.aspects.Aspect;
 import thaumcraft.api.aspects.AspectEventProxy;

@@ -1,4 +1,4 @@
-package com.shadowking21.tc_integraton.Utils;
+package com.shadowking21.tc_integraton.utils;
 
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
