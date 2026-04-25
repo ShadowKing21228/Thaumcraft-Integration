@@ -38,8 +38,12 @@ public class ClusterProcessing {
                 List<ItemStack> ingot = OreDictionary.getOres(ingotMaterial);
                 //List<ItemStack> ore = OreDictionary.getOres(oreMaterial);
 
+                if (cluster.isEmpty()) continue;
+
                 ItemStack clusterStack = cluster.get(0);
                 clusterDrop(oreMaterial, clusterStack);
+
+                if (ingot.isEmpty()) continue;
 
                 ItemStack ingot2 = ingot.get(0).copy();
                 ingot2.setCount(2);
